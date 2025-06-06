@@ -4,60 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vilora</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Шрифты -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     html { scroll-behavior: smooth; }
-    .font-vilora { font-family: 'Great Vibes', cursive; }
-    .font-satisfy { font-family: 'Satisfy', cursive; }
+    .font-vilora   { font-family: 'Great Vibes', cursive; }
+    .font-satisfy  { font-family: 'Satisfy', cursive; }
+    .font-display  { font-family: 'Playfair Display', serif; }
+    .font-patrick  { font-family: 'Patrick Hand', cursive; }
+    .font-playpen  { font-family: 'Playpen Sans', cursive; }
+    .font-noto     { font-family: 'Noto Sans', sans-serif; }
   </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800 relative">
 
-<!-- Modal -->
-<div id="modal-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-  <div id="modal-content" class="bg-white p-6 rounded-lg shadow-lg text-center">
-    <div id="modal-icon" class="text-3xl mb-2">📞</div>
-    <div id="modal-text" class="text-lg font-semibold">403-923-1990</div>
-    <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Close</button>
-  </div>
-</div>
-
-<header class="bg-gradient-to-r from-[#b0cc20]/80 to-[#e0d000]/80 backdrop-blur-md text-white text-sm sm:text-base fixed top-0 left-0 w-full z-40 shadow-md h-[45px]">
-  <div class="max-w-7xl mx-auto flex items-center justify-between h-full">
-    <div class="flex items-center h-full ml-2">
-      <h1 class="font-vilora text-[20px] sm:text-[28px] font-bold italic tracking-wide leading-none text-white">Vilora</h1>
+  <!-- Модальное окно -->
+  <div id="modal-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div id="modal-content" class="bg-white p-6 rounded-lg shadow-lg text-center">
+      <div id="modal-icon" class="text-3xl mb-2">📞</div>
+      <div id="modal-text" class="text-lg font-semibold">403-923-1990</div>
+      <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Close</button>
     </div>
-    <div class="h-full flex items-center ml-36">
-      <a href="#about" class="h-full px-4 flex items-center text-white font-semibold rounded-md transition duration-200 shadow" style="background: linear-gradient(to top, rgba(160,185,45,0.5), rgba(160,185,45,0));">
-        About Us
+  </div>
+
+  <!-- Шапка -->
+  <header class="bg-gradient-to-r from-[#b0cc20]/80 to-[#e0d000]/80 backdrop-blur-md text-white text-sm sm:text-base fixed top-0 left-0 w-full z-40 shadow-md h-[45px]">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-full px-4">
+      <div class="flex items-center h-full">
+        <h1 class="font-vilora text-[20px] sm:text-[28px] font-normal italic tracking-wide leading-none text-white">Vilora</h1>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <a href="#about" class="text-sm font-semibold px-4 py-1.5 rounded-full shadow hover:opacity-90 transition" style="background-color: rgba(255, 255, 255, 0.21); color: #726e17;">
+          Learn More About Us
+        </a>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3 pr-2">
+        <a href="#" onclick="showModal('📧','yourname@yourdomain.com'); return false;">
+          <img src="email_n.png" alt="Email" class="h-7 w-7 sm:h-8 sm:w-8 rounded-lg">
+        </a>
+        <a href="#" onclick="showModal('📞','403-923-1990'); return false;">
+          <img src="tel.png" alt="Телефон" class="h-7 w-7 sm:h-8 sm:w-8 rounded-lg">
+        </a>
+        <a href="https://www.facebook.com/vilora.gives" target="_blank">
+          <img src="fec.png" alt="Facebook" class="h-[26px] w-[26px] sm:h-[32px] sm:w-[32px] rounded-lg">
+        </a>
+        <a href="https://www.instagram.com/vilora.gives/" target="_blank">
+          <img src="ins.png" alt="Instagram" class="h-7 w-7 sm:h-8 sm:w-8 rounded-lg">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главный экран -->
+  <section class="relative min-h-[75vh] bg-cover bg-center flex items-center justify-center mt-[45px]" style="background-image: url(fon2.png);">
+    <div class="text-center max-w-xl mx-4 mt-12 sm:mt-16">
+      <h1 style="margin-top: -104px; color: rgba(255, 254, 250, 0.94); opacity: 0.97; text-shadow:
+        -1px -1px 0.6px rgba(0,0,0,0.3),
+         1px -1px 0.6px rgba(0,0,0,0.3),
+        -1px  1px 0.6px rgba(0,0,0,0.3),
+         1px  1px 0.6px rgba(0,0,0,0.3);" 
+          class="text-xl sm:text-3xl md:text-4xl font-normal mb-10 font-playpen">
+        Be a reason someone smiles today
+      </h1>
+
+      <a href="tel:+14039231990" 
+         class="inline-flex items-center justify-center px-6 py-3 mb-10 text-black font-semibold rounded-full shadow-lg hover:opacity-90 transition"
+         style="background: linear-gradient(to right, #b7d528e0, #f0dc00e0);">
+        📞 Call: 403-923-1990
       </a>
-    </div>
-    <div class="flex items-center gap-3">
-      <a href="#" onclick="showModal('📧','yourname@yourdomain.com'); return false;"><img src="email_n.png" alt="Email" class="h-7 sm:h-8 rounded-lg"></a>
-      <a href="#" onclick="showModal('📞','403-923-1990'); return false;"><img src="tel.png" alt="Телефон" class="h-7 sm:h-8 rounded-lg"></a>
-      <a href="https://www.facebook.com/vilora.gives" target="_blank"><img src="fec.png" alt="Facebook" class="h-[26px] sm:h-[32px] rounded-lg"></a>
-      <a href="https://www.instagram.com/vilora.gives/" target="_blank"><img src="ins.png" alt="Instagram" class="h-7 sm:h-8 rounded-lg"></a>
-    </div>
-  </div>
-</header>
 
-<section class="relative min-h-[75vh] bg-cover bg-center flex items-center justify-center pt-[100px]" style="background-image: url(fon2.png);">
-  <div class="p-6 text-white text-center max-w-xl mx-4">
-    <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 font-satisfy">Be a reason someone smiles today</h1>
-    <a href="tel:+14039231990" class="inline-flex items-center px-6 py-3 mt-4 text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition" style="background-color: rgba(160, 199, 68, 0.9);">
-      📞 Call: 403-923-1990
-    </a>
-    <div class="mt-3 px-4 py-2 bg-white bg-opacity-80 text-green-900 rounded-full text-sm sm:text-base font-semibold shadow-sm inline-block">
-      Или отправьте SMS с текстом <strong>Velora</strong> на этот номер
+      <div class="px-6 py-3 rounded-full text-sm sm:text-base font-semibold shadow-sm inline-block"
+        style="background-color: rgba(249, 253, 211, 0.875); color: #6c5c00;">
+        Or send an <strong>SMS</strong> with the word <strong>Vilora</strong> to this number
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Секция: How It Works -->
 <section class="bg-white py-12 px-4 sm:px-8">
+  <div class="relative w-full">
+    <div class="absolute inset-0 bg-gray-300 bg-opacity-15 h-full z-0"></div>
+    <h2 class="relative z-10 text-3xl sm:text-4xl font-noto text-gray-800 text-center py-4">
+      How It Works
+    </h2>
+  </div>
+
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">How It Works</h2>
     <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
       We make donating easy. Just schedule a pickup and leave your items at the door. 
       Our team will take care of everything — sorting, cleaning, and distributing where help is needed most.
@@ -70,92 +112,103 @@
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-2 py-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-2">
-  <div class="overflow-hidden rounded-lg shadow-lg bg-white">
-    <img src="1.png" alt="Photo 1" class="w-full object-cover">
-    <div class="p-4 text-gray-800 text-sm sm:text-base">
-      <p><strong>Step 1:</strong> Our team will pick up your unwanted items right from your doorstep.</p>
-    </div>
-  </div>
-  <div class="overflow-hidden rounded-lg shadow-lg bg-white">
-    <img src="2.png" alt="Photo 2" class="w-full object-cover">
-    <div class="p-4 text-gray-800 text-sm sm:text-base">
-      <p><strong>Step 2:</strong> We will sort or repair the items you’ve donated to direct them toward various projects.</p>
-    </div>
-  </div>
-  <div class="overflow-hidden rounded-lg shadow-lg bg-white">
-    <img src="3.png" alt="Photo 3" class="w-full object-cover">
-    <div class="p-4 text-gray-800 text-sm sm:text-base">
-      <p><strong>Step 3:</strong> The items you no longer needed will go on to benefit others.</p>
-    </div>
-  </div>
-</section>
 
-<section id="about" class="bg-white py-12 px-4 sm:px-8">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-8">About Us</h2>
-    <div class="text-gray-700 text-base sm:text-lg leading-relaxed space-y-5">
-      <p>We are a community-driven organization dedicated to doing good and giving unwanted items a second life.</p>
-      <p>We collect clothing, shoes, toys, books, sports equipment, and other items that people are ready to part with — so they can be passed on to those who truly need them.</p>
-      <p>Our team carefully sorts, restores, and redirects these items to where they can bring joy, support, and a sense of dignity.</p>
-      <p>But our mission goes beyond that. We run a variety of projects focused both on social support and on promoting environmental responsibility. We care about nature, animals, and children — and we work actively to reduce waste and raise awareness about conscious living.</p>
-      <p>Some of the resources we receive are reinvested into expanding our organization, allowing us to create even more opportunities to help those in need.</p>
-      <p>Doing good has never been easier. Just pack your unwanted items into the bag we leave at your door. One of our team members will pick it up — no hassle, no waiting.</p>
-      <p>We take care of the rest: sorting, repairing, recycling, and distributing the items through meaningful projects that make a real difference.</p>
-    </div>
-  </div>
-</section>
 
-<section class="bg-gray-50 py-10 px-4 sm:px-8">
-  <div class="max-w-4xl mx-auto text-left text-gray-700 text-base sm:text-lg space-y-6">
-    <h3 class="text-2xl font-semibold text-gray-800">What We Accept</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
-      <ul class="list-disc list-inside space-y-1">
-        <li>Clothing and shoes (in wearable condition)</li>
-        <li>Sports gear and equipment</li>
-        <li>Small household electronics</li>
-        <li>Dishes, kitchen utensils, and cookware</li>
-        <li>Books, toys, and creative supplies</li>
-        <li>Decorations, framed art, and posters</li>
-        <li>Bedding, sheets, blankets</li>
+
+
+
+
+  <!-- Шаги: 1, 2, 3 -->
+  <section class="max-w-7xl mx-auto px-2 py-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-2">
+    <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+      <img src="1.png" alt="Photo 1" class="w-full object-cover">
+      <div class="p-4 text-gray-800 text-sm sm:text-base">
+        <p><strong>Step 1:</strong> Our team will pick up your unwanted items right from your doorstep.</p>
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+      <img src="2.png" alt="Photo 2" class="w-full object-cover">
+      <div class="p-4 text-gray-800 text-sm sm:text-base">
+        <p><strong>Step 2:</strong> We will sort or repair the items you’ve donated to direct them toward various projects.</p>
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+      <img src="3.png" alt="Photo 3" class="w-full object-cover">
+      <div class="p-4 text-gray-800 text-sm sm:text-base">
+        <p><strong>Step 3:</strong> The items you no longer needed will go on to benefit others.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок "О нас" -->
+  <section id="about" class="bg-white py-12 px-4 sm:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-8">About Us</h2>
+      <div class="text-gray-700 text-base sm:text-lg leading-relaxed space-y-5">
+        <p>We are a community-driven organization dedicated to doing good and giving unwanted items a second life.</p>
+        <p>We collect clothing, shoes, toys, books, sports equipment, and other items that people are ready to part with — so they can be passed on to those who truly need them.</p>
+        <p>Our team carefully sorts, restores, and redirects these items to where they can bring joy, support, and a sense of dignity.</p>
+        <p>But our mission goes beyond that. We run a variety of projects focused both on social support and on promoting environmental responsibility. We care about nature, animals, and children — and we work actively to reduce waste and raise awareness about conscious living.</p>
+        <p>Some of the resources we receive are reinvested into expanding our organization, allowing us to create even more opportunities to help those in need.</p>
+        <p>Doing good has never been easier. Just pack your unwanted items into the bag we leave at your door. One of our team members will pick it up — no hassle, no waiting.</p>
+        <p>We take care of the rest: sorting, repairing, recycling, and distributing the items through meaningful projects that make a real difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Что мы принимаем / не принимаем -->
+  <section class="bg-gray-50 py-10 px-4 sm:px-8">
+    <div class="max-w-4xl mx-auto text-left text-gray-700 text-base sm:text-lg space-y-6">
+      <h3 class="text-2xl font-semibold text-gray-800">What We Accept</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Clothing and shoes (in wearable condition)</li>
+          <li>Sports gear and equipment</li>
+          <li>Small household electronics</li>
+          <li>Dishes, kitchen utensils, and cookware</li>
+          <li>Books, toys, and creative supplies</li>
+          <li>Decorations, framed art, and posters</li>
+          <li>Bedding, sheets, blankets</li>
+        </ul>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Board games, DVDs, CDs, and other media</li>
+          <li>Perfumes, accessories, costume jewelry</li>
+          <li>Craft materials and leftover DIY supplies</li>
+          <li>Small appliances and hobby equipment</li>
+          <li>Bicycles, scooters, and recreational items</li>
+          <li>Unique miscellaneous items that could be useful to others</li>
+          <li class="italic text-gray-600">If you're unsure — just ask us. We're happy to help.</li>
+        </ul>
+      </div>
+      <h3 class="text-2xl font-semibold text-gray-800 pt-4">What We Cannot Accept</h3>
+      <ul class="list-disc list-inside space-y-1 text-red-700">
+        <li>Large furniture (wardrobes, wall units, etc.)</li>
+        <li>Refrigerators, washing machines, stoves</li>
+        <li>Oversized or built-in items</li>
       </ul>
-      <ul class="list-disc list-inside space-y-1">
-        <li>Board games, DVDs, CDs, and other media</li>
-        <li>Perfumes, accessories, costume jewelry</li>
-        <li>Craft materials and leftover DIY supplies</li>
-        <li>Small appliances and hobby equipment</li>
-        <li>Bicycles, scooters, and recreational items</li>
-        <li>Unique miscellaneous items that could be useful to others</li>
-        <li class="italic text-gray-600">If you're unsure — just ask us. We're happy to help.</li>
-      </ul>
+      <p class="pt-4 text-gray-700">
+        If you're not sure whether we can accept your items, feel free to contact us at <strong>403-923-1990</strong>.<br />
+        Our team will be happy to assist you and arrange a convenient pickup time.
+      </p>
     </div>
-    <h3 class="text-2xl font-semibold text-gray-800 pt-4">What We Cannot Accept</h3>
-    <ul class="list-disc list-inside space-y-1 text-red-700">
-      <li>Large furniture (wardrobes, wall units, etc.)</li>
-      <li>Refrigerators, washing machines, stoves</li>
-      <li>Oversized or built-in items</li>
-    </ul>
-    <p class="pt-4 text-gray-700">
-      If you're not sure whether we can accept your items, feel free to contact us at <strong>403-923-1990</strong>.<br />
-      Our team will be happy to assist you and arrange a convenient pickup time.
-    </p>
-  </div>
-</section>
+  </section>
 
-<footer class="text-center text-xs text-gray-600 py-6">
-  © 2024 Vilora. All rights reserved.
-</footer>
+  <!-- Подвал сайта -->
+  <footer class="text-center text-xs text-gray-600 py-6">
+    © 2024 Vilora. All rights reserved.
+  </footer>
 
-<script>
-  function showModal(icon, text) {
-    document.getElementById('modal-overlay').classList.remove('hidden');
-    document.getElementById('modal-icon').innerText = icon;
-    document.getElementById('modal-text').innerText = text;
-  }
-  function closeModal() {
-    document.getElementById('modal-overlay').classList.add('hidden');
-  }
-</script>
+  <!-- Скрипт управления модальным окном -->
+  <script>
+    function showModal(icon, text) {
+      document.getElementById('modal-overlay').classList.remove('hidden');
+      document.getElementById('modal-icon').innerText = icon;
+      document.getElementById('modal-text').innerText = text;
+    }
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.add('hidden');
+    }
+  </script>
 
 </body>
 </html>
