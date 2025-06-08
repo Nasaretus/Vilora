@@ -164,58 +164,74 @@
   </section>
 
   <!-- Что мы принимаем / не принимаем -->
-  <section class="bg-gray-50 py-10 px-4 sm:px-8">
-    <div class="max-w-4xl mx-auto text-left text-gray-700 text-base sm:text-lg space-y-6">
-      <h3 class="text-2xl font-semibold text-gray-800">What We Accept</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
-        <ul class="list-disc list-inside space-y-1">
-          <li>Clothing and shoes (in wearable condition)</li>
-          <li>Sports gear and equipment</li>
-          <li>Small household electronics</li>
-          <li>Dishes, kitchen utensils, and cookware</li>
-          <li>Books, toys, and creative supplies</li>
-          <li>Decorations, framed art, and posters</li>
-          <li>Bedding, sheets, blankets</li>
-        </ul>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Board games, DVDs, CDs, and other media</li>
-          <li>Perfumes, accessories, costume jewelry</li>
-          <li>Craft materials and leftover DIY supplies</li>
-          <li>Small appliances and hobby equipment</li>
-          <li>Bicycles, scooters, and recreational items</li>
-          <li>Unique miscellaneous items that could be useful to others</li>
-          <li class="italic text-gray-600">If you're unsure — just ask us. We're happy to help.</li>
-        </ul>
-      </div>
-      <h3 class="text-2xl font-semibold text-gray-800 pt-4">What We Cannot Accept</h3>
-      <ul class="list-disc list-inside space-y-1 text-red-700">
-        <li>Large furniture (wardrobes, wall units, etc.)</li>
-        <li>Refrigerators, washing machines, stoves</li>
-        <li>Oversized or built-in items</li>
+<section class="bg-gray-50 py-10 px-4 sm:px-8">
+  <div class="max-w-4xl mx-auto text-left text-gray-700 text-base sm:text-lg space-y-6">
+
+    <!-- Что мы принимаем -->
+    <h3 class="text-2xl font-semibold text-gray-800">What We Accept</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12">
+      <ul class="list-disc list-inside space-y-1">
+        <li>Clothing and shoes (in wearable condition)</li>
+        <li>Sports gear and equipment</li>
+        <li>Small household electronics</li>
+        <li>Dishes, kitchen utensils, and cookware</li>
+        <li>Books, toys, and creative supplies</li>
+        <li>Decorations, framed art, and posters</li>
+        <li>Bedding, sheets, blankets</li>
       </ul>
-      <p class="pt-4 text-gray-700">
-        If you're not sure whether we can accept your items, feel free to contact us at <strong>403-923-1990</strong>.<br />
-        Our team will be happy to assist you and arrange a convenient pickup time.
-      </p>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Board games, DVDs, CDs, and other media</li>
+        <li>Perfumes, accessories, costume jewelry</li>
+        <li>Craft materials and leftover DIY supplies</li>
+        <li>Small appliances and hobby equipment</li>
+        <li>Bicycles, scooters, and recreational items</li>
+        <li>Unique miscellaneous items that could be useful to others</li>
+        <li class="italic text-gray-600">If you're unsure — just ask us. We're happy to help.</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- Подвал сайта -->
-  <footer class="text-center text-xs text-gray-600 py-6">
-    © 2024 Vilora. All rights reserved.
-  </footer>
+    <!-- Что не принимаем -->
+    <h3 class="text-2xl font-semibold text-gray-800 pt-4">What We Cannot Accept</h3>
+    <ul class="list-disc list-inside space-y-1 text-red-700">
+      <li>Large furniture (wardrobes, wall units, etc.)</li>
+      <li>Refrigerators, washing machines, stoves</li>
+      <li>Oversized or built-in items</li>
+    </ul>
 
-  <!-- Скрипт управления модальным окном -->
-  <script>
-    function showModal(icon, text) {
-      document.getElementById('modal-overlay').classList.remove('hidden');
-      document.getElementById('modal-icon').innerText = icon;
-      document.getElementById('modal-text').innerText = text;
-    }
-    function closeModal() {
-      document.getElementById('modal-overlay').classList.add('hidden');
-    }
-  </script>
+    <!-- Картинки в карточках -->
+    <div class="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
+      <!-- Левая карточка -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm w-full">
+        <img src="Veloract2.png" alt="Veloract2" class="w-full h-auto object-cover">
+      </div>
 
-</body>
-</html>
+      <!-- Правая карточка -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-sm w-full">
+        <img src="Veloract.png" alt="Veloract" class="w-full h-auto object-cover">
+      </div>
+    </div>
+
+    <!-- Контактный текст -->
+    <p class="pt-6 text-gray-700">
+      If you're not sure whether we can accept your items, feel free to contact us at <strong>403-923-1990</strong>.<br />
+      Our team will be happy to assist you and arrange a convenient pickup time.
+    </p>
+  </div>
+</section>
+
+<!-- Секция благодарности -->
+<section class="bg-gray-100 py-8 px-4 sm:px-8">
+  <div class="max-w-3xl mx-auto text-center text-gray-800 text-base sm:text-lg">
+    <p class="mb-2">Thank you for visiting our website and taking the time to learn about Vilora.</p>
+    <p>Your attention and support help us continue this mission of giving, helping, and sharing with others.</p>
+  </div>
+</section>
+
+<!-- Подвал сайта -->
+<footer class="bg-gray-200 text-center text-sm text-gray-700 py-6 px-4">
+  <div class="max-w-4xl mx-auto space-y-2">
+    <p>© 2025 Vilora Project. Created by enthusiasts and volunteers to promote the mission of conscious giving and social responsibility.</p>
+    <p>Thank you for supporting a kinder, more sustainable future.</p>
+    <p>Contact us by phone: <strong>403-923-1990</strong></p>
+  </div>
+</footer>
